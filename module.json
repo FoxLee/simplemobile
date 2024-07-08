@@ -12,7 +12,7 @@
 			"discord": "TheArtGremblin",
 			"email": "fox@invincible.ink",
 			"url": "https://www.invincible.ink"
-		},
+		}
 	],
 	"esmodules": ["mobile.js"],
 	"styles": ["mobile.css"],
