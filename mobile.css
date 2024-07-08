@@ -4,6 +4,7 @@ div#mobile-controls {
 i.fas.fa-mobile-alt {
 	color: #00ffa1;
 }
+
 @media only screen and (max-width: 1024px) {
 div#mobile-controls {
     display: block !important;
@@ -156,7 +157,7 @@ li.combatant.actor.directory-item.flexrow {
     border-radius: 0;
     padding: 7px;
 }
-.fa-play:before {
+#sidebar .fa-play:before{
     content: "\f04b";
     margin-left: 20px;
     color: #38de38;
@@ -278,15 +279,13 @@ div#players {
     height: 40px;
 }
 #sidebar-tabs > .collapse {
-    position: relative;;
-    line-height: 32px;
+    position: relative;
+    line-height: 1;
     color: #ffffff;
     text-align: center;
     background: #bf4b00;
-    padding: 23px;
-    padding-top: 0;
+    padding:6px;
     border-radius: 5px;
-    padding-bottom: 0;
     margin-top: 2px;
     flex: 1;
 }
@@ -303,9 +302,8 @@ a#macro-directory {
     width: 56px !important;
     height: 408px !important;
 }
-i.fas.fa-caret-left {
-    transform: scale(1.5);
-    margin-top: 17px;
+.collapse .fas.fa-caret-left::before{
+    font-size:1.5rem;
 }
 #chat-form {
     height: 200px;
@@ -332,8 +330,8 @@ i.fas.fa-caret-left {
     overflow: auto;
 }
 
-::before {
-    font-size: 20px;
+.fas::before{
+    font-size:1.1rem;
 }
 
 
@@ -476,6 +474,7 @@ li.directory-item.entity.playlist.flexrow.collapsed {
 
 
 }/*PHONE END*/
+
 div#mobile-controls {
 display:none;
 }
@@ -521,4 +520,18 @@ div#hotbar-page-controls {
     width: 100px;
     height: 45px !important;
     align-items: center;
+}
+#sidebar:not(.collapsed){
+    right:2em;
+    position:relative;
+}
+#sidebar:not(.collapsed) #sidebar-tabs{
+    flex-wrap:wrap;
+}
+#players{
+    position:absolute;
+    bottom:0;
+}
+#touch-vtt-controls{
+    max-width:40px;
 }
